@@ -1,0 +1,247 @@
+<!--
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UI Gate Tracker</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="bar" id="bar" hidden>
+  <h1>UI Gate Tracker</h1>
+  <nav id="tabs" aria-label="Sections"></nav>
+  <div class="who"><span id="who"></span><button id="logout" class="ghost">Sign out</button></div>
+</header>
+
+<main id="view" tabindex="-1"></main>
+
+<section id="login" class="login" hidden>
+  <div class="login-card">
+    <div class="barrier" aria-hidden="true"><div class="post"></div><div class="arm"></div></div>
+    <h1>RFID Smart Parking</h1>
+    <p class="muted">University of Ibadan gate control</p>
+    <form id="login-form">
+      <label>Username <input name="username" autocomplete="username" required></label>
+      <label>Password <input name="password" type="password" autocomplete="current-password" required></label>
+      <p class="error" id="login-error" role="alert"></p>
+      <button type="submit">Sign in</button>
+    </form>
+  </div>
+</section>
+<script src="/static/app.js"></script>
+</body>
+-->
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111a22">
+
+  <meta
+    name="description"
+    content="University of Ibadan RFID Smart Parking and Gate Control System"
+  >
+
+  <title>GateCTRL | UI Smart Parking</title>
+
+  <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+  <!-- SIDEBAR NAVIGATION -->
+  <header class="sidebar" id="bar" hidden>
+
+    <div class="brand">
+
+      <div class="brand-mark" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="brand-copy">
+        <h1>GATE<span>CTRL</span></h1>
+        <small>UI · ACCESS SYSTEMS</small>
+      </div>
+
+      <button
+        type="button"
+        id="nav-toggle"
+        class="nav-toggle ghost"
+        aria-label="Open navigation"
+        aria-controls="tabs"
+        aria-expanded="false"
+      >
+        <span class="menu-icon" aria-hidden="true">☰</span>
+      </button>
+
+    </div>
+
+    <div class="nav-caption">OPERATIONS</div>
+
+    <!-- JavaScript generates role-specific navigation buttons here -->
+    <nav id="tabs" aria-label="Main navigation"></nav>
+
+    <div class="sidebar-footer">
+
+      <div class="system-status">
+        <span class="status-dot" aria-hidden="true"></span>
+
+        <div>
+          <strong>GATE SYSTEM</strong>
+          <small>Access terminal online</small>
+        </div>
+      </div>
+
+      <div class="who">
+
+        <div class="user-avatar" aria-hidden="true">UI</div>
+
+        <div class="user-info">
+          <span id="who"></span>
+          <small>Authorized operator</small>
+        </div>
+
+        <button
+          type="button"
+          id="logout"
+          class="ghost logout-btn"
+          aria-label="Sign out"
+          title="Sign out"
+        >↗</button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- MAIN APPLICATION CONTENT -->
+  <main id="view" tabindex="-1" hidden></main>
+
+
+  <!-- LOGIN SCREEN -->
+  <section
+    id="login"
+    class="login"
+    aria-labelledby="login-title"
+    hidden
+  >
+
+    <div class="login-card">
+
+      <div class="barrier" aria-hidden="true">
+        <div class="post"></div>
+        <div class="arm"></div>
+      </div>
+
+      <div class="login-brand">
+
+        <span class="login-brand-mark" aria-hidden="true">UI</span>
+
+        <div>
+          <span class="eyebrow">UNIVERSITY OF IBADAN</span>
+          <p class="login-brand-name">GATECTRL</p>
+        </div>
+
+      </div>
+
+      <div class="login-heading">
+        <h1 id="login-title">RFID Smart Parking</h1>
+        <p class="muted">University of Ibadan gate control</p>
+      </div>
+
+      <div class="login-divider">
+        <span></span>
+        <small>OPERATOR ACCESS</small>
+        <span></span>
+      </div>
+
+      <form id="login-form">
+
+        <label for="username">
+          Username
+          <input
+            id="username"
+            name="username"
+            type="text"
+            placeholder="Enter your username"
+            autocomplete="username"
+            required
+          >
+        </label>
+
+        <label for="password">
+          Password
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Enter your password"
+            autocomplete="current-password"
+            required
+          >
+        </label>
+        <div class="default-credentials">
+  <span class="credentials-icon" aria-hidden="true">i</span>
+
+  <div class="credentials-content">
+    <strong>Default Login Credentials</strong>
+
+    <p>
+      Username:
+      <code>gate1</code>
+    </p>
+
+    <p>
+      Password:
+      <code>ChangeMe!2026</code>
+    </p>
+
+    
+  </div>
+</div>
+
+        <p
+          class="error"
+          id="login-error"
+          role="alert"
+          aria-live="polite"
+        ></p>
+
+        <button type="submit" class="login-submit">
+          <span>Sign in to dashboard</span>
+          <span aria-hidden="true">→</span>
+        </button>
+
+      </form>
+
+      <div class="login-security">
+        <span class="security-indicator" aria-hidden="true"></span>
+        SECURE ACCESS · RFID CONTROL
+      </div>
+
+    </div>
+
+    <footer class="login-footer">
+      GATECTRL SYSTEMS
+      <span>·</span>
+      UNIVERSITY OF IBADAN
+    </footer>
+
+  </section>
+
+
+  <!-- Application logic and mobile navigation -->
+  <script src="/static/app.js"></script>
+
+</body>
+</html>
+
