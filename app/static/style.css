@@ -1462,3 +1462,55 @@ tbody tr:hover {
     font-size: 0.82rem;
   }
 }
+
+/* Mobile logout button: hidden on desktop */
+.mobile-logout {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .mobile-logout {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+
+    margin-left: auto;
+    padding: 0;
+
+    border: 1px solid #45525c;
+    border-radius: 6px;
+
+    background: #202d37;
+    color: #ff9387;
+
+    font-size: 1.3rem;
+  }
+
+  .mobile-logout:hover {
+    border-color: #ff9387;
+    background: #352522;
+  }
+
+  /* Prevent the hamburger from pushing outside the header */
+  .nav-toggle {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .mobile-logout {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+  }
+
+  .nav-toggle {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+}

@@ -1661,7 +1661,8 @@ $("#tabs").addEventListener("click", e => {
 
 
 // Sign out.
-$("#logout").addEventListener("click", async () => {
+
+async function logoutUser() {
   try {
     await api("/auth/logout", {
       method: "POST"
@@ -1670,13 +1671,17 @@ $("#logout").addEventListener("click", async () => {
     showLogin();
 
   } catch (e) {
-    // A 401 may already have displayed the login screen.
     if (user) {
       alert(e.message);
     }
   }
-});
+}
 
+// Desktop sidebar logout
+$("#logout")?.addEventListener("click", logoutUser);
+
+// Mobile header logout
+$("#mobile-logout")?.addEventListener("click", logoutUser);
 
 // Sign in.
 $("#login-form").addEventListener("submit", async e => {
