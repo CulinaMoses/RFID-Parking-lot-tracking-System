@@ -87,12 +87,12 @@ th{font-weight:600;color:var(--muted)}
   color-scheme: dark;
 
   --asphalt: #1d2730;
-  --concrete: #141b21;
-  --panel: #1d262e;
-  --line: #33414c;
+  --concrete: #0b1f3a;  /* Main dashboard background */
+  --panel: #12345a;     /* Dashboard cards */
+  --line: #285078;      /* Card and table borders */
 
-  --ink: #e6ecef;
-  --muted: #97a4ad;
+  --ink: #f0f6ff;       /* Main text */
+  --muted: #b4c8df; 
 
   --go: #3fc08f;
   --stop: #f0776a;
