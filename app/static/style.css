@@ -82,20 +82,21 @@ th{font-weight:600;color:var(--muted)}
 
 /* ---------- DESIGN TOKENS ---------- */
 
+
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 
   --asphalt: #1d2730;
-  --concrete: #e7eaec;
-  --panel: #f6f8f9;
-  --line: #c9d0d5;
+  --concrete: #141b21;
+  --panel: #1d262e;
+  --line: #33414c;
 
-  --ink: #18232b;
-  --muted: #5b6872;
+  --ink: #e6ecef;
+  --muted: #97a4ad;
 
-  --go: #12805c;
-  --stop: #b5372b;
-  --amber: #b87f00;
+  --go: #3fc08f;
+  --stop: #f0776a;
+  --amber: #e3b341;
   --hazard: #f2c230;
 
   --sidebar-bg: #111a22;
@@ -107,18 +108,12 @@ th{font-weight:600;color:var(--muted)}
   --sidebar-width: 258px;
 
   --font-head:
-    "Bahnschrift",
-    "Arial Narrow",
-    "Roboto Condensed",
-    system-ui,
-    sans-serif;
+    "Bahnschrift", "Arial Narrow",
+    "Roboto Condensed", system-ui, sans-serif;
 
   --font-body:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    sans-serif;
+    system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
 
   --radius: 8px;
   --shadow: 0 12px 32px rgb(19 31 40 / 8%);
