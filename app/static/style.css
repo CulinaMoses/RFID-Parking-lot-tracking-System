@@ -126,12 +126,12 @@ th{font-weight:600;color:var(--muted)}
   :root {
     color-scheme: dark;
 
-    --concrete: #141b21;
-    --panel: #1d262e;
-    --line: #33414c;
+    --concrete: #0b1f3a;
+    --panel: #12345a;
+    --line: #285078;
 
-    --ink: #e6ecef;
-    --muted: #97a4ad;
+    --ink: #f0f6ff;
+    --muted: #b4c8df;
 
     --go: #3fc08f;
     --stop: #f0776a;
